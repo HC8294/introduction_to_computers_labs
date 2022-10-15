@@ -7,7 +7,7 @@ def gcd(a, b):#建立函式
       error="0沒有gcd"
       return error #回傳error並結束整個函式
     x = m % n
-    while(x==m-n):#當大數減兩數相除的餘數等於0時(兩數互質)
+    while(x==m-n or n==1):#兩數互質時
       coprime =str(a)+"和"+str(b)+"互質"
       return coprime #回傳coprime並結束整個函式
     while(n!=0 and x!=0):#開始輾轉相除法
