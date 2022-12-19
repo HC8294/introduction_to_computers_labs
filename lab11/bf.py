@@ -16,7 +16,6 @@ def BF(input):
           return result
        def permute_util(self,given_list,start,curr,result):
           if start > len(given_list)-1:
-             #print(curr)
              result.append(curr)
              return
           for i in range(start,len(given_list)):
@@ -33,7 +32,7 @@ def BF(input):
     b=len(result_0123[0])
     
     result_job=[]
-    for m in range(a): 
+    for m in range(a):
       result_job.append([])
       for n in range(b):
         result_job[m].append(input[n][result_0123[m][n]])
@@ -51,12 +50,7 @@ def BF(input):
 with open('input.json', 'r') as inputFile:
     data = json.load(inputFile) 
     for key in data:
-        input = data[key] 
-
-        # show input data and number of the Tasks
-        # print(input)
-
-        # Brute Force Algorithm
+        input = data[key]
         assignment, cost = BF(input)
 
         print('Question: ' + str(key))
