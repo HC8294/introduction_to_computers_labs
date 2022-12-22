@@ -8,7 +8,7 @@ dirc=[]
 data = response.json()
 
 for i in data:
-  num.append(["編號"])
+  num.append(i["編號"])
   locat.append(i["設備地點"])
   speed.append(i["速限"])
   dirc.append(i["方向"])
